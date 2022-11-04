@@ -17,12 +17,14 @@ a:hover {
 
 body {
 	margin: 0;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
 }
 
 #body-div {
+	display: flex;
+	flex-direction: column;
 	flex: 1;
 }
 
@@ -61,6 +63,8 @@ ul {
 	padding-bottom: 3rem;
 	display: flex;
 	gap: 1.5rem;
+	justify-content: space-between;
+	/*flex-wrap: wrap-reverse; */
 }
 
 .block h1 {
@@ -160,4 +164,32 @@ a:hover {
 	color:  #F9FAF8;
 	font-size: 12px;
 	text-align: center;
+}
+
+@media only screen and (max-width: 1040px) {
+
+	.container.one {
+		flex-wrap: wrap-reverse;
+		justify-content: center;
+	}
+
+}
+
+@media only screen and (max-width: 680px) {
+	.logo {
+		display: none;
+	}
+
+	header {
+		height: 75px;
+		justify-content: space-around;
+		font-size: 1.25rem;
+	}
+
+	.container.one h1 {
+		max-width: 198px;
+		font-size: 1.75rem;
+		justify-content: center
+		;
+	}
 }
